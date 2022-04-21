@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"moduleResolution": "Node",
+		"outDir": "./build",
+		"rootDir": "./src",
+		"declaration": true,
+		"sourceMap": true,
+		"removeComments": true,
+		"noEmitOnError": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"noImplicitReturns": true,
+		"skipLibCheck": true
+	}
+}
