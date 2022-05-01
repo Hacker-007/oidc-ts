@@ -9,3 +9,5 @@ interface StorageAdapter<T extends Id> {
     update(id: string, value: T): Promise<T | undefined>
     delete(id: string): Promise<T | undefined>
 }
+
+export default StorageAdapter

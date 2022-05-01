@@ -1,4 +1,4 @@
-import Client from "./utils/client";
+import Client from "./client";
 
 export interface Validator<T> {
     validate(value: T): boolean
@@ -30,8 +30,17 @@ export class ResponseTypeValidator implements Validator<string> {
 
 export class RedirectUriValidator implements Validator<{client: Client, uri: string}> {
     validate(value: { client: Client; uri: string; }): boolean {
-        
-        
+		const parsedUri = new URL(value.uri)
+		const exists = value.client.redirectUris.includes(parsedUri)
+		if (!exists) {
+			return false
+		}
+
+		const hasFragment = parsedUri.hash.replace('#', '')
+		if (hasFragment) {
+			return false
+		}
+		        
         return true
     }
 }

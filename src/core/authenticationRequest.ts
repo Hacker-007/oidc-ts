@@ -11,3 +11,7 @@ type AuthenticationRequest = {
     idTokenHint?: string
     loginHint?: string
 }
+
+type AuthenticationResponse = {
+	
+}
